@@ -5,7 +5,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="theme-color" content="#08090d" />
+    <title>GODHAND</title>
+    <style>
+      *{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#08090d;color:#eee;font-family:Tahoma,Arial,sans-serif}body{min-height:100vh;display:grid;place-items:center;padding:28px;background:radial-gradient(ellipse at 50% 15%,#291014 0,transparent 48%),#08090d}.wrap{width:min(680px,100%);text-align:center}.headline{font-size:clamp(2.6rem,10vw,5.5rem);font-weight:900;letter-spacing:-2px;color:#f3eeee;text-shadow:0 0 30px #9e172755;margin:0 0 12px}.sub{color:#a9a3a5;margin:0 0 34px;font-size:14px}.panel{border:1px solid #54252c;background:#111116;border-radius:14px;padding:22px;text-align:right;box-shadow:0 18px 70px #0009}.panel h2{font-size:15px;color:#e6a1a8;margin:0 0 16px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.item{background:#19191f;border:1px solid #29262c;border-radius:9px;padding:12px;min-width:0}.k{display:block;color:#918a90;font-size:11px;margin-bottom:7px}.v{display:block;color:#f2edef;font-size:13px;direction:ltr;text-align:right;overflow-wrap:anywhere}.note{font-size:11px;color:#777078;line-height:1.9;margin:16px 2px 0}@media(max-width:420px){.grid{grid-template-columns:1fr 1fr}.panel{padding:15px}.item{padding:10px}.v{font-size:12px}}
+    </style>
   </head>
-  <body>از اینجا برو</body>
+  <body>
+    <main class="wrap">
+      <h1 class="headline">از اینجا برو</h1>
+      <p class="sub">اتصال شما برقرار شد. اطلاعات فنی قابل مشاهدهٔ این نشست:</p>
+      <section class="panel" aria-live="polite">
+        <h2>گزارش نشست</h2>
+        <div class="grid">
+          <div class="item"><span class="k">IP عمومی</span><b class="v" id="a">در حال بررسی…</b></div>
+          <div class="item"><span class="k">کشور / کد منطقه</span><b class="v" id="b">—</b></div>
+          <div class="item"><span class="k">مرورگر</span><b class="v" id="c">—</b></div>
+          <div class="item"><span class="k">سیستم‌عامل</span><b class="v" id="d">—</b></div>
+          <div class="item"><span class="k">نوع دستگاه</span><b class="v" id="e">—</b></div>
+          <div class="item"><span class="k">وضوح صفحه</span><b class="v" id="f">—</b></div>
+          <div class="item"><span class="k">زبان مرورگر</span><b class="v" id="g">—</b></div>
+          <div class="item"><span class="k">منطقه زمانی</span><b class="v" id="h">—</b></div>
+          <div class="item"><span class="k">زمان ورود محلی</span><b class="v" id="i">—</b></div>
+          <div class="item"><span class="k">وضعیت اتصال</span><b class="v" id="j">—</b></div>
+        </div>
+        <p class="note">این گزارش فقط اطلاعات فنی‌ای را نشان می‌دهد که مرورگر یا سرویس شبکه در اختیار صفحه می‌گذارد. هویت واقعی، رمزها، فایل‌ها و اطلاعات خصوصی دستگاه قابل مشاهده نیستند. موقعیت مکانی دقیق نیز بدون اجازهٔ کاربر دریافت نمی‌شود.</p>
+      </section>
+    </main>
+    <script>
+      (()=>{const q=s=>document.getElementById(s),u=navigator.userAgent||"",p=(r)=>{const m=u.match(r);return m?m[1]:"نامشخص"};let br=/Edg\//.test(u)?"Edge":/OPR\//.test(u)?"Opera":/Firefox\//.test(u)?"Firefox":/CriOS\//.test(u)?"Chrome iOS":/Chrome\//.test(u)?"Chrome":/Safari\//.test(u)?"Safari":"نامشخص";let os=/Android/i.test(u)?"Android":/iPhone|iPad|iPod/i.test(u)?"iOS":/Windows/i.test(u)?"Windows":/Mac OS/i.test(u)?"macOS":/Linux/i.test(u)?"Linux":"نامشخص";q("c").textContent=br;q("d").textContent=os;q("e").textContent=/Mobi|Android|iPhone/i.test(u)?"موبایل":/iPad|Tablet/i.test(u)?"تبلت":"رایانه / نامشخص";q("f").textContent=screen.width+" × "+screen.height+" px";q("g").textContent=navigator.language||"نامشخص";q("h").textContent=Intl.DateTimeFormat().resolvedOptions().timeZone||"نامشخص";q("i").textContent=new Date().toLocaleString("fa-IR");q("j").textContent=navigator.onLine?"آنلاین":"آفلاین";fetch("/cdn-cgi/trace",{cache:"no-store"}).then(x=>x.text()).then(t=>{const z=Object.fromEntries(t.trim().split("\n").map(v=>v.split("=")));q("a").textContent=z.ip||"در دسترس نیست";q("b").textContent=z.loc||"نامشخص"}).catch(()=>{q("a").textContent="قابل دریافت نیست";q("b").textContent="نامشخص"})})();
+    </script>
+  </body>
 </html>
