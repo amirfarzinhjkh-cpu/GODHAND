@@ -1,0 +1,13 @@
+name = "arcana-api"
+main = "src/index.js"
+compatibility_date = "2026-11-27"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "arcana-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+
+[vars]
+ALLOWED_ORIGIN = "https://YOUR-DOMAIN"
+ADMIN_EMAIL = "YOUR-ADMIN-EMAIL"
